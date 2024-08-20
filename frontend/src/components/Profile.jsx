@@ -9,7 +9,7 @@ import AppliedJobsTable from './AppliedJobsTable'
 import UpdateProfile from './UpdateProfile'
 import { useSelector } from 'react-redux'
 
-const skills = ["C++","GO","NodeJs","ExpressJs"]
+// const skills = ["C++","GO","NodeJs","ExpressJs"]
 
 const isResume = true;
 const Profile = () => {
@@ -50,9 +50,9 @@ const Profile = () => {
           </div>
         </div>
         <div className='grid w-full max-w-sm items-center gap-1.5'>
-          <label className='text-md font-bold'>{user?.profile?.resume}</label>
+          <label className='text-md font-bold'>Resume</label>
           {
-            isResume ? <a target='blank' href='https://www.linkedin.com/in/samarth-srivastava-21229422a/' className='text-blue-500 w-full hover:underline cursor-pointer'>Samarth Srivastava</a> : <span>NA</span>
+            isResume ? <a target='blank' href={user?.profile?.resume} className='text-blue-500 w-full hover:underline cursor-pointer'>{user?.profile?.resumeOriginalName}</a> : <span>NA</span>
           }
         </div>
       </div>
