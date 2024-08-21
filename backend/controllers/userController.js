@@ -104,7 +104,7 @@ export const updateProfile = async(req,res)=>{
         const file = req.file;
         //cloudinary
         const fileUri = getDataUri(file);
-        const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+        const cloudResponse = await cloudinary.uploader.upload(fileUri.content,{ format: "jpg", resource_type: "image" });
         let skillsArray;
         if(skills){
             skillsArray = skills.split(",");
