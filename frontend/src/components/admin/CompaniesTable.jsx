@@ -3,8 +3,10 @@ import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, Tabl
 import { Avatar, AvatarImage } from '../ui/avatar'
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 import { Edit2, MoreHorizontal } from 'lucide-react'
+import { useSelector } from 'react-redux'
 
 const CompaniesTable = () => {
+    const {companies} = useSelector(store=>store.company)
   return (
     <div>
         <Table>

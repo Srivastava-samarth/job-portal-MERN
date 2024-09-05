@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../shared/Navbar";
 import { Button } from "../ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { useNavigate, useParams } from "react-router-dom";
@@ -29,7 +29,7 @@ const CompanySetup = () => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
   const changeFileHandler = (e) => {
-    const file = e.target.file?.[0];
+    const file = e.target.files?.[0];
     setInput({ ...input, file });
   };
   const submitHandler = async (e) => {
